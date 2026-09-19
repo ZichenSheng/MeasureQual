@@ -1,0 +1,29 @@
+---
+title: "An audit that decides nothing"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An audit that decides nothing}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+An empty decision map reports the evidence and returns UNRESOLVED. It does not invent a scientific threshold.
+
+```{r setup, include=FALSE}
+library(evaluably)
+source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+```
+
+The complete synthetic declaration is installed at
+`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+Its scientific choices are illustrative declarations, never engine defaults.
+
+```{r}
+t <- toy_spec()
+s <- freeze_audit(t$spec)
+check <- check_audit(s, t$data)
+run <- run_audit(check, t$data)
+record <- evidence_record(run, render = FALSE)
+stopifnot(record$qualification$terminal_state == "UNRESOLVED")
+record$interpretation_license$disposition
+```

@@ -1,0 +1,26 @@
+---
+title: "Definition-implied behaviour"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Definition-implied behaviour}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This synthetic declaration uses a constant author predicate: the outcome is stipulated by the definition. It demonstrates rule dispatch, not empirical identification.
+
+```{r setup, include=FALSE}
+library(evaluably)
+source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+```
+
+The complete synthetic declaration is installed at
+`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+Its scientific choices are illustrative declarations, never engine defaults.
+
+```{r}
+t <- toy_spec("DEFINITION_IMPLIED")
+r <- evidence_record(run_audit(check_audit(freeze_audit(t$spec), t$data), t$data), render = FALSE)
+stopifnot(r$qualification$terminal_state == "DEFINITION_IMPLIED")
+r$interpretation_license$disposition
+```

@@ -1,0 +1,8 @@
+step_id	from_n	to_n	rule_id	rule_text
+publications_to_instances	265	271	ENUMERATE_MODEL_INSTANCES	Multiple model instances per publication; not an exclusion
+eligible_retained	271	242	AUTH_CURRENT_ELIGIBILITY	current_eligibility is ELIGIBLE or ELIGIBLE_RETAINED
+complete_membership	242	232	AUTH_COMPLETE_MEMBERSHIP	Frozen complete membership count; scope boundaries recorded separately
+primary_operator	232	201	FROZEN_OPERATOR_PARTITION	232 = 201 PRIMARY + 17 SENSITIVITY17 + 8 EXCLUDED/OFFSCOPE + 6 NONREPRESENTABLE
+primary_pre	201	37	PRE37	Pre-freeze stratum; disjoint union with POST164
+primary_post	201	164	POST164	Post-freeze stratum; disjoint union with PRE37
+sensitivity	232	17	SENSITIVITY17	Additional frozen sensitivity set; not Primary201

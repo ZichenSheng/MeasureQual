@@ -1,0 +1,29 @@
+---
+title: "Constructibility and inferential support"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Constructibility and inferential support}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+A zero-capacity cell blocks execution. A separate design whose smallest attainable probability is 1/16 cannot reach an explicitly declared alpha of .05. Later gates remain unassessed after the first block.
+
+```{r setup, include=FALSE}
+library(evaluably)
+source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+```
+
+The complete synthetic declaration is installed at
+`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+Its scientific choices are illustrative declarations, never engine defaults.
+
+```{r}
+for (t in list(toy_spec(capacity = FALSE), toy_spec(min_p = 1/16))) {
+  check <- check_audit(freeze_audit(t$spec), t$data)
+  stopifnot(check$entry_gate == "BLOCKED")
+  r <- evidence_record(check, render = FALSE)
+  stopifnot(r$qualification$terminal_state == "NOT_EVALUABLE")
+  print(r$interpretation_license$suppression)
+}
+```

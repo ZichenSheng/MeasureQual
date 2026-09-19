@@ -1,0 +1,2 @@
+amendment_id	class	date	date_relative_to_results	reason	affected_tables
+ACT6_RESOURCE_RETABULATION_001	A1	2026-09-12	AFTER_RESULTS	Schema retabulation of frozen derived resources; no new biological calculations	PRIMARY201_MANIFEST;GENE_MEMBERSHIP_LONG;DERIVATION_CASCADE;EXCLUSION_LEDGER;EVALUABILITY_MATRIX;REPRESENTATION_REGISTRY;CLAIM_REGISTRY

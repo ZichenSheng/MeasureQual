@@ -1,0 +1,2 @@
+claim_id	claim_family	claim_class	claim_text	context_id	source_file
+STAGEB1_DS03_Q100_RECOVERY	positive_recovery	MEASUREMENT_CAPABILITY	Recovery of the declared positive alternative at q100 under the frozen DS03 blocked design.	DS03_MALIGNANT_ONLY	GBM_ACT6_CURRENT_CLAUDE_EVIDENCE_HANDOFF_2026-09-11/act5/06_ACT5_V2_COMPLETE_STAGEB1_DENOMINATOR.tsv

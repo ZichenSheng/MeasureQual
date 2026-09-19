@@ -1,0 +1,27 @@
+test_that("canonical serialization sorts objects but preserves positional arrays", {
+  expect_identical(.canonical_json(list(z = c("B", "A"), a = 1)), '{"a":1,"z":["B","A"]}')
+  expect_identical(.hash(list(b = 2, a = 1)), .hash(list(a = 1, b = 2)))
+  expect_false(identical(.hash(c("B", "A")), .hash(c("A", "B"))))
+  expect_identical(.hash("one\r\ntwo"), .hash("one\ntwo"))
+  expect_error(.canonical_json(list(fn = function(x) x)), "Runtime objects")
+  expect_identical(.sha256("abc"), "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad")
+  expect_identical(.canonical_json(list(k = c(b = 2, a = 1))), '{"k":{"a":1,"b":2}}')
+})
+test_that("forbidden inheritance keys are recursively rejected", {
+  expect_error(.forbidden_keys(list(a = list(b = list(inherits_evidence_from = "r1")))), class = "evidence_forbidden_inheritance_key")
+  expect_error(.canonical_json(list(inherits_evidence_from = NULL)), class = "evidence_forbidden_inheritance_key")
+  expect_true(.forbidden_keys(list(relationships = list(record_id = "r1"))))
+})
+test_that("runtime fingerprints match exact prescribed serialized bytes", {
+  x <- list(a = data.frame(x = 1:3), b = c(TRUE, NA))
+  h <- .runtime_fingerprint(x)
+  expect_identical(h, digest::digest(serialize(x, NULL, version = 3, xdr = TRUE, ascii = FALSE), algo = "sha256", serialize = FALSE))
+  expect_identical(h, .runtime_fingerprint(unserialize(serialize(x, NULL))))
+  expect_false(identical(h, .runtime_fingerprint(rev(x))))
+  x$a$x[1] <- 10L
+  expect_false(identical(h, .runtime_fingerprint(x)))
+  expect_error(.runtime_fingerprint(list(e = new.env())), class = "evaluably_error_unserializable_data")
+  expect_error(.runtime_fingerprint(new("externalptr")), class = "evaluably_error_unserializable_data")
+  y <- 1; attr(y, "hidden") <- new.env()
+  expect_error(.runtime_fingerprint(y), class = "evaluably_error_unserializable_data")
+})

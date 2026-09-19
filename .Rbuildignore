@@ -1,0 +1,7 @@
+^companion$
+^\.github$
+^CITATION\.cff$
+^PROVENANCE\.md$
+^PUBLIC_RELEASE_MANIFEST\.tsv$
+^DATA_CLASSIFICATION\.tsv$
+^LICENSE\.md$

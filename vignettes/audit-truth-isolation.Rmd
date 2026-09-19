@@ -1,0 +1,39 @@
+---
+title: "Truth leakage, declaration and repair"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Truth leakage, declaration and repair}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The leaky callback closes over the protected truth vector. Declaring dependence requires human review. The repaired callback receives only accessible inputs; the protected assignment never enters its construction. The supported outcome follows an explicit synthetic author rule, not an automatic biological conclusion.
+
+```{r setup, include=FALSE}
+library(evaluably)
+source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+```
+
+The complete synthetic declaration is installed at
+`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+Its scientific choices are illustrative declarations, never engine defaults.
+
+```{r}
+leaky <- toy_spec(leak = TRUE)
+blocked <- check_audit(freeze_audit(leaky$spec), leaky$data)
+stopifnot(blocked$integrity$outcome == "INVALID_TRUTH_LEAKAGE")
+declared <- toy_spec(truth_dependence = TRUE)
+c <- check_audit(freeze_audit(declared$spec), declared$data)
+stopifnot("DECLARED_TRUTH_DEPENDENCE" %in% c$flags)
+repaired <- toy_spec("SUPPORTED_WITHIN_DOMAIN")
+s <- amend_audit(repaired$spec, "SCIENTIFIC", "Declare bounded scope", "example analyst",
+ list(flags = c("PANEL_BOUNDED", "DOMAIN_BOUNDED", "LOW_SCIENTIFIC_N")))
+c <- check_audit(freeze_audit(s), repaired$data)
+stopifnot(c$integrity$outcome == "PASS_PROBED")
+r <- evidence_record(run_audit(c, repaired$data), render = FALSE)
+stopifnot(r$qualification$terminal_state == "SUPPORTED_WITHIN_DOMAIN")
+r$interpretation_license$required_qualifiers
+r$interpretation_license$prohibited_extensions
+```
+
+The package does not rank signatures, infer biological truth, or transfer a licence between contexts.

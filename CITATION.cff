@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this version of evaluably when using the software."
+title: "evaluably: claim-scoped measurement audit declarations"
+type: software
+version: 0.9.0
+authors:
+  - family-names: Sheng
+    given-names: Zichen
+    email: "225113177+ZichenSheng@users.noreply.github.com"
+repository-code: "https://github.com/ZichenSheng/evaluably"
+url: "https://github.com/ZichenSheng/evaluably"
+license: MIT
+keywords:
+  - reproducibility
+  - measurement
+  - glioblastoma
+  - R

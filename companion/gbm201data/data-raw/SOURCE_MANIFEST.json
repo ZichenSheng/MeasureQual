@@ -1,0 +1,47 @@
+[
+  {
+    "path": "GBM_ACT6_CURRENT_CLAUDE_EVIDENCE_HANDOFF_2026-09-11/resource/PRIMARY201_MODEL_MANIFEST_FROZEN.tsv",
+    "sha256": "1a27dd10c5e5d3bbd19d895e7078d8633f18de44d2a1d829b999cb541ab6f368",
+    "byte_size": 84573
+  },
+  {
+    "path": "GBM_ACT6_CURRENT_CLAUDE_EVIDENCE_HANDOFF_2026-09-11/resource/PRIMARY201_GENE_MEMBERSHIP_FROZEN.tsv",
+    "sha256": "5304f8b9ee07fa3052be2a8568c0080dc068e0438fbeda3f5081d8e7d10575b5",
+    "byte_size": 636022
+  },
+  {
+    "path": "GBM_SIGNATURE_3D_CROSS_LAYER_MEASUREMENT_VALIDATION_V6_FINAL/00_governance/PRIMARY201_GENE_CROSSWALK_FROZEN.tsv",
+    "sha256": "25d206a3a99293fc16d9cfbc2a7ba82aa7929abe3530fbeaeb2f7294642e4e65",
+    "byte_size": 542533
+  },
+  {
+    "path": "GBM\u6807\u7b7e\u6570\u636e\u5e93/GBM_unified_registry_de_novo_benchmark_AuthorityV2_2026-07-23/02_authority/registry_authority_v2/extracted/GBM_legacy46_reconstructed_authority_v2_2026-07-23/11_UNIFIED_MODEL_INSTANCE_REGISTRY_AUTHORITY_V2.tsv",
+    "sha256": "bbe928cf6b68e38bf1a178df0d16a30691101792683f899edfc85e04969a2f74",
+    "byte_size": 185729
+  },
+  {
+    "path": "GBM\u6807\u7b7e\u6570\u636e\u5e93/GBM_unified_registry_de_novo_benchmark_AuthorityV2_2026-07-23/02_authority/registry_authority_v2/extracted/GBM_legacy46_reconstructed_authority_v2_2026-07-23/10_UNIFIED_PUBLICATION_REGISTRY_AUTHORITY_V2.tsv",
+    "sha256": "e724d866b2bcfbc39567d68d4420c89e101194c5909865e7d062ab50e8f82702",
+    "byte_size": 103413
+  },
+  {
+    "path": "GBM_ACT6_CURRENT_CLAUDE_EVIDENCE_HANDOFF_2026-09-11/act5/02_ACT5_V2_SIGNATURE_IDENTITY_LOCK.tsv",
+    "sha256": "83c6a3d88c0879bd266662918091cf430231020c8642a1526b173f5216cbf9be",
+    "byte_size": 12344
+  },
+  {
+    "path": "GBM_ACT6_CURRENT_CLAUDE_EVIDENCE_HANDOFF_2026-09-11/act5/06_ACT5_V2_COMPLETE_STAGEB1_DENOMINATOR.tsv",
+    "sha256": "83adea475807e0e9c912578d1056d120792c4a70c31196af46f63a38cfd076c6",
+    "byte_size": 8258
+  },
+  {
+    "path": "GBM_CURRENT_CURATED_RELEASE_2026-08-22/COUNT_AUTHORITY.tsv",
+    "sha256": "9268b763ab9e120f3adfe9829f2ec47f18a3edd021054bc3d2859b6ccdb98a07",
+    "byte_size": 4113
+  },
+  {
+    "path": "GBM_FINAL_AUTHORITY_PROPAGATION_AND_MANUSCRIPT_FREEZE_PREP_2026-09-06/05_methods_and_evaluability/PRIMARY201_REPRESENTABILITY_CASCADE.tsv",
+    "sha256": "e9689aae65d4656c5584fe1878006df61f58e7bfead78dcc643cba02db26fb4d",
+    "byte_size": 1786
+  }
+]

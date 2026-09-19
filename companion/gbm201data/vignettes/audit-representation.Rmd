@@ -1,0 +1,15 @@
+---
+title: "Membership does not recover the original model"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Membership does not recover the original model}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+An unweighted membership representation does not reproduce a published weighted model, its coefficients or its clinical rule. These frozen records are resource evidence, not a validation tutorial.
+
+```{r}
+library(gbm201data)
+gbm_representation("PF4C-B4-007")
+```

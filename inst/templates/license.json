@@ -1,0 +1,18 @@
+{
+  "preamble": "These constraints follow from the terminal state, flags and declarations recorded under the decision map frozen at {timestamp}. They constrain what this evidence can support for the claim the author declared. They are not conclusions, they do not establish biological truth, and they do not substitute for scientific judgment.",
+  "LICENSED": "Evidence supports the declared claim within the tested representation, context and inferential design.",
+  "NOT_LICENSED": "The recorded evidence does not license the declared claim.",
+  "qualifiers": {
+    "DOMAIN_BOUND": "Bounded to the tested domain.",
+    "REPRESENTATION_BOUND": "Bounded to the declared representation.",
+    "DESIGN_BOUND": "Bounded to the declared inferential design.",
+    "PANEL_BOUND": "Bounded to the declared panel.",
+    "CAPABILITY_ONLY": "This is a measurement-capability result; it does not establish biological truth.",
+    "CALIBRATION_SCOPE_DESIGN_LEVEL": "Calibration was assessed at design level, not individually for this subject.",
+    "LOW_SCIENTIFIC_N": "The declared scientific replication is limited.",
+    "REFERENCE_DEPENDENT": "The evidence depends on the declared reference.",
+    "SATURATION_LIMITED": "The observed ladder limits detection-floor interpretation.",
+    "EQUIVALENCE_UNKNOWN": "Equivalence to the original object was not established."
+  },
+  "exploratory_preamble": "This exploratory record has no confirmatory interpretation licence. Its declared claim remains subject to scientific review."
+}

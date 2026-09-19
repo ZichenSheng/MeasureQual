@@ -1,0 +1,16 @@
+---
+title: "Computability is not evaluability"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Computability is not evaluability}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Evaluability is claim and design specific. Membership availability alone cannot establish alpha reachability. Missing registry rows carry no conclusion.
+
+```{r}
+library(gbm201data)
+x <- gbm_evaluability()
+x[, c("model_instance_id", "evaluable", "stop_reason")]
+```

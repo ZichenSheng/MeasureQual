@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:evaluably:evidence-record:1.0.2",
+  "title": "ACT6 canonical evidence record",
+  "description": "Structural archival contract. verify_audit additionally recomputes identity and dual hashes. No evidence inheritance is permitted at any depth.",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "type": "object",
+      "properties": {
+        "record_id": {
+          "type": "string"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "subject_id": {
+          "type": "string"
+        },
+        "subject_provenance": {
+          "type": "string"
+        },
+        "claim_id": {
+          "type": "string"
+        },
+        "claim_family": {
+          "type": "string"
+        },
+        "claim_class": {
+          "type": "string"
+        },
+        "context_id": {
+          "type": "string"
+        },
+        "inferential_design_id": {
+          "type": "string"
+        },
+        "subject_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_contract_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "audit_member_key": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "record_id",
+        "schema_version",
+        "subject_id",
+        "subject_provenance",
+        "claim_id",
+        "claim_family",
+        "claim_class",
+        "context_id",
+        "inferential_design_id",
+        "subject_label",
+        "claim_contract_hash",
+        "audit_member_key"
+      ],
+      "additionalProperties": false
+    },
+    "declarations": {
+      "type": "object"
+    },
+    "preflight": {
+      "type": "object"
+    },
+    "execution_evidence": {
+      "type": "object"
+    },
+    "qualification": {
+      "type": "object",
+      "properties": {
+        "terminal_state": {
+          "enum": [
+            "SUPPORTED_WITHIN_DOMAIN",
+            "DEFINITION_IMPLIED",
+            "DIRECTIONALLY_MISLEADING",
+            "NOT_EVALUABLE",
+            "INVALID",
+            "UNRESOLVED"
+          ]
+        },
+        "flags": {
+          "type": [
+            "array",
+            "string"
+          ]
+        },
+        "capability_descriptor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rule_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "because": {
+          "type": "string"
+        },
+        "precedence_rule_fired": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "terminal_state",
+        "flags",
+        "capability_descriptor",
+        "rule_id",
+        "because",
+        "precedence_rule_fired"
+      ],
+      "additionalProperties": false
+    },
+    "interpretation_license": {
+      "type": "object",
+      "properties": {
+        "declared_claim_id": {
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "LICENSED",
+            "NOT_LICENSED",
+            "SUPPRESSED"
+          ]
+        },
+        "licensed_scope": {
+          "type": "object"
+        },
+        "required_qualifiers": {
+          "type": [
+            "array",
+            "string"
+          ]
+        },
+        "prohibited_extensions": {
+          "type": [
+            "array",
+            "string"
+          ]
+        },
+        "suppression": {
+          "type": "object",
+          "properties": {
+            "suppressed": {
+              "type": "boolean"
+            },
+            "reasons": {
+              "type": [
+                "array",
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "suppressed",
+            "reasons"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "declared_claim_id",
+        "disposition",
+        "licensed_scope",
+        "required_qualifiers",
+        "prohibited_extensions",
+        "suppression"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "record_id": {
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "SAME_SUBJECT_DIFFERENT_REPRESENTATION",
+              "SAME_SUBJECT_DIFFERENT_CLAIM",
+              "SAME_SUBJECT_DIFFERENT_CONTEXT",
+              "SAME_SUBJECT_DIFFERENT_DESIGN",
+              "SAME_SUBJECT_DIFFERENT_ALPHA_OR_RULE"
+            ]
+          },
+          "representation_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "record_scientific_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "record_id",
+          "relation",
+          "representation_hash",
+          "record_scientific_hash"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rendered_prose": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "identity",
+    "declarations",
+    "preflight",
+    "execution_evidence",
+    "qualification",
+    "interpretation_license",
+    "provenance",
+    "relationships",
+    "rendered_prose"
+  ],
+  "additionalProperties": false
+}

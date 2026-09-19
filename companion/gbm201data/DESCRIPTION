@@ -1,0 +1,16 @@
+Package: gbm201data
+Title: Frozen GBM201 Measurement Resource and Claim Evaluability
+Version: 0.9.0
+Authors@R: person("Zichen", "Sheng", role = c("aut", "cre"), email = "225113177+ZichenSheng@users.noreply.github.com")
+Description: Versioned frozen derived membership, provenance and claim-scoped
+    evaluability tables for the Primary201 resource. Accessors preserve
+    unavailable source values and expose design-specific refusals without
+    ranking models or transferring qualification between scientific contexts.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: utils
+Suggests: testthat (>= 3.0.0), knitr, rmarkdown, digest
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+RoxygenNote: 7.3.3

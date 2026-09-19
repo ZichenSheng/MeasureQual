@@ -1,0 +1,30 @@
+---
+title: "Reference dependence"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Reference dependence}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+REFERENCE_DEPENDENT is a declared limitation flag. It can coexist with a supported state and constrains the licence; it is not a terminal state.
+
+```{r setup, include=FALSE}
+library(evaluably)
+source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+```
+
+The complete synthetic declaration is installed at
+`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+Its scientific choices are illustrative declarations, never engine defaults.
+
+```{r}
+t <- toy_spec("SUPPORTED_WITHIN_DOMAIN")
+s <- amend_audit(t$spec, "SCIENTIFIC", "Declare reference limitation", "example analyst",
+                 list(flags = "REFERENCE_DEPENDENT"))
+s <- freeze_audit(s)
+r <- evidence_record(run_audit(check_audit(s, t$data), t$data), render = FALSE)
+stopifnot(r$qualification$terminal_state == "SUPPORTED_WITHIN_DOMAIN",
+          "REFERENCE_DEPENDENT" %in% r$qualification$flags)
+r$interpretation_license$required_qualifiers
+```
