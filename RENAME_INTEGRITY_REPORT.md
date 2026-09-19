@@ -48,6 +48,9 @@ Failures=0; errors=0; skips=0; test warnings=0. Total 536/536.
 Both packages: 0 errors, 0 warnings, 0 notes on R 4.4.1 / macOS arm64,
 using --no-manual. Package builds, vignette rebuilds and examples pass.
 Manual PDF compilation is outside the documented check scope.
+Clean-library loading and the synthetic workflow pass. Both GitHub installation
+commands passed in a clean library. remotes 2.5.0 still resolves the root name
+for the companion when using its local cache; force=TRUE remains required.
 
 ## H. CROSS-PLATFORM CI
 
@@ -58,5 +61,8 @@ Migration CI must pass before creating v0.10.0; status pending at preparation.
 
 Historical version DOI: 10.5281/zenodo.22846293 (evaluably v0.9.0).
 Existing concept DOI: 10.5281/zenodo.22846292.
-Rename synchronization and association verification precede new release.
+Before release, Zenodo synchronization shows MeasureQual enabled under the
+same GitHub repository ID 1377225741 and associated with historical version
+22846293, whose verified concept is 22846292. The existing release webhook
+remains active. The historical GitHub URL returns 301 to MeasureQual.
 No new DOI is claimed until assigned; no unrelated concept record authorized.

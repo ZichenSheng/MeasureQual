@@ -1,4 +1,11 @@
-# Provenance
+# Current release: MeasureQual 0.10.0
+
+This is a package/repository rename of the immutable evaluably 0.9.0 release.
+Scientific algorithms and resource bytes are unchanged. See
+RENAME_INTEGRITY_REPORT.md for the current audit; the following records the
+historical v0.9.0 release and is retained without retroactive renaming.
+
+# Historical evaluably 0.9.0 provenance
 
 Source: ACT6_IMPLEMENTATION_RELEASE_CANDIDATE_V2_2026-09-13, packages evaluably
 0.9.0 and gbm201data 0.9.0. Public sources were selected from the corresponding
