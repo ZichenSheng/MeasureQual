@@ -14,8 +14,12 @@ models, rescue a failed claim or transfer evidence between records.
 ```r
 remotes::install_github("ZichenSheng/evaluably")
 # Optional frozen signature/resource registries; independent of evaluably:
-remotes::install_github("ZichenSheng/evaluably", subdir = "companion/gbm201data")
+remotes::install_github("ZichenSheng/evaluably", subdir = "companion/gbm201data", force = TRUE)
 ```
+
+With remotes 2.5.0, `force = TRUE` avoids a repository-name cache shortcut
+that can incorrectly skip the companion after installing the root package.
+Both installations were tested from GitHub in a clean library.
 
 ## Synthetic example
 
