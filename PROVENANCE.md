@@ -20,7 +20,8 @@ testthat expectations passed (536 total), with zero failures/errors/skips.
 Both packages passed R CMD check with zero errors, warnings or notes;
 vignettes and documented examples were built and executed. Clean-library
 installation, synthetic workflow, 21/7 exports and all companion file hashes
-were independently verified. GitHub installations passed for both packages;
+were independently verified. Git checkout is pinned to LF line endings so
+Windows preserves the frozen resource byte hashes. GitHub installations passed for both packages;
 remotes 2.5.0 requires force=TRUE for the companion when the same-repository
 root package is already installed. CI is pending; no cross-platform claim yet.
 Manual PDF compilation is not claimed when checks use --no-manual.
