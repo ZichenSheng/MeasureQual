@@ -1,5 +1,7 @@
 # evaluably
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22846293.svg)](https://doi.org/10.5281/zenodo.22846293)
+
 `evaluably` 0.9.0 executes claim-scoped measurement audits: the analyst specifies
 which representation, units, context and claim are being evaluated, and the
 engine checks whether the declared evidence can support that claim.
@@ -60,7 +62,6 @@ Linux, macOS and Windows. Configuration alone is not a cross-platform validation
 
 ## Citation and license
 
-Use CITATION.cff for software citation. A Zenodo DOI will be added only after an
-actual archival record is assigned. The companion belongs to this software
+Use CITATION.cff for software citation. The archived version DOI is [10.5281/zenodo.22846293](https://doi.org/10.5281/zenodo.22846293). The companion belongs to this software
 release and does not receive a separate repository or DOI. Original code is MIT;
 source datasets retain their providers' terms and are not redistributed.

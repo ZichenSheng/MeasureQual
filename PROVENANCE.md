@@ -23,7 +23,10 @@ installation, synthetic workflow, 21/7 exports and all companion file hashes
 were independently verified. Git checkout is pinned to LF line endings so
 Windows preserves the frozen resource byte hashes. GitHub installations passed for both packages;
 remotes 2.5.0 requires force=TRUE for the companion when the same-repository
-root package is already installed. CI is pending; no cross-platform claim yet.
+root package is already installed. CI passed all six root/companion checks on Linux, macOS and Windows:
+https://github.com/ZichenSheng/evaluably/actions/runs/35448009365
+Release v0.9.0 is fixed at commit 7502778bfddb09301e93a28dd9b82d9162e0dea4.
+DOI citation updates on main do not move that tag.
 Manual PDF compilation is not claimed when checks use --no-manual.
 
 PUBLIC_RELEASE_MANIFEST.tsv records every public source file except itself
