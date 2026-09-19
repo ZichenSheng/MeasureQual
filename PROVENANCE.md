@@ -10,6 +10,8 @@ Scientific R files, NAMESPACE, tests, man pages, examples, vignettes, schema,
 resource builder and frozen resource tables are verified byte-for-byte against
 the source authority. Publication changes affect DESCRIPTION contact/URLs,
 README, citation, NEWS, CI, build exclusions and publication manifests only.
+The companion data-raw builder remains in Git; it is excluded from installable
+package tarballs to satisfy current R package top-level conventions.
 Tarball hashes therefore differ from the internal tarballs; tarball timestamps
 and generated vignette metadata may also differ. No algorithm was changed.
 
