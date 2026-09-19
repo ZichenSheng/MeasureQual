@@ -17,7 +17,7 @@ Recomputes hashes and current callback dependencies. Verification checks identit
 }
 \section{Errors}{
 
-Malformed contracts raise structured evaluably conditions. Verification and
+Malformed contracts raise structured MeasureQual conditions. Verification and
 phase mismatches fail closed; no decision rule rescues a blocked gate.
 }
 

@@ -12,11 +12,11 @@
 #' @param allow_incomparable Explicit permission to display differing metric versions.
 #' @return Reporting-only audit_collection.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' r <- evidence_record(run_audit(check_audit(s, t$data), t$data))
@@ -48,11 +48,11 @@ audit_collection <- function(records,collection_reason,comparison_contract=NULL,
 #' @param collection audit_collection; counts require recomputed comparability.
 #' @return Plain list of denominator counts, missing/unexpected keys and provenance sentence.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' r <- evidence_record(run_audit(check_audit(s, t$data), t$data))

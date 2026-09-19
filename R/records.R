@@ -53,7 +53,7 @@
  qualification=.plain(result)[c("terminal_state","flags","capability_descriptor","rule_id","because","precedence_rule_fired")],
  interpretation_license=.license(spec,result,execution,unit),
  provenance=list(lifecycle=spec$lifecycle,spec_hash=spec$spec_hash,parent_spec_hash=spec$parent_spec_hash,amendment_ledger=spec$amendment_ledger,
- source_locators=spec$source_locators,source_sha256=spec$source_sha256,pkg_name="evaluably",pkg_version=as.character(utils::packageVersion("evaluably")),r_version=as.character(getRversion()),platform=R.version$platform,
+ source_locators=spec$source_locators,source_sha256=spec$source_sha256,pkg_name="MeasureQual",pkg_version=as.character(utils::packageVersion("MeasureQual")),r_version=as.character(getRversion()),platform=R.version$platform,
  run_timestamp=if(executed) x$run_timestamp else x$checked_at,frozen_at=spec$frozen_at,runtime_data_fingerprint=x$runtime_data_fingerprint),relationships=relationships,rendered_prose=list())
  rec$rendered_prose<-.render_prose(rec,"1.0.0");structure(.record_hashes(rec),class="evidence_record")
 }
@@ -68,11 +68,11 @@
 #' @param formats Requested output formats; JSON is always written.
 #' @return Immutable evidence_record; optionally writes JSON and a human-readable report.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' evidence_record(check_audit(freeze_audit(toy_spec(capacity = FALSE)$spec), t$data))
@@ -91,7 +91,7 @@ evidence_record <- function(x,...,relationships=list(),render=TRUE,path=NULL,for
 }
 .render_prose <- function(record,template_version) {
  l<-record$interpretation_license
- templates<-jsonlite::fromJSON(system.file("templates","license.json",package="evaluably"),simplifyVector=FALSE)
+ templates<-jsonlite::fromJSON(system.file("templates","license.json",package="MeasureQual"),simplifyVector=FALSE)
  paragraph<-if(l$disposition=="SUPPRESSED") NULL else templates[[l$disposition]]
  list(template_version=template_version,preamble=if(is.null(record$provenance$frozen_at)) templates$exploratory_preamble else gsub("{timestamp}",record$provenance$frozen_at,templates$preamble,fixed=TRUE),license_paragraph=paragraph,
  qualifier_lines=if(l$disposition=="SUPPRESSED") character() else unname(vapply(l$required_qualifiers,function(q) templates$qualifiers[[q]],character(1))),
@@ -106,11 +106,11 @@ evidence_record <- function(x,...,relationships=list(),render=TRUE,path=NULL,for
 #' @param template_version Version label of the rendered template.
 #' @return Updated evidence_record, invisible when written to path.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' r <- evidence_record(run_audit(check_audit(s, t$data), t$data))

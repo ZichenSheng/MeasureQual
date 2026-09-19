@@ -1,0 +1,22 @@
+old_export	new_export	signature_identical	body_hash_identical	status	notes
+alternative_spec	alternative_spec	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+amend_audit	amend_audit	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+apply_decision_map	apply_decision_map	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+audit_collection	audit_collection	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+audit_saturation	audit_saturation	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+audit_spec	audit_spec	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+check_alternative_integrity	check_alternative_integrity	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+check_audit	check_audit	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+constructibility_census	constructibility_census	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+decision_map	decision_map	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+denominator_summary	denominator_summary	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+evidence_record	evidence_record	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+freeze_audit	freeze_audit	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+inferential_rule	inferential_rule	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+reference_spec	reference_spec	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+render_audit	render_audit	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+representation_spec	representation_spec	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+run_audit	run_audit	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+stress_response	stress_response	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+unit_spec	unit_spec	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed
+verify_audit	verify_audit	TRUE	TRUE	PASS	Scientific function body and defaults unchanged; namespace renamed

@@ -1,33 +1,31 @@
-# evaluably
+# MeasureQual
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22846293.svg)](https://doi.org/10.5281/zenodo.22846293)
+**Claim-scoped qualification of computational measurements**
 
-`evaluably` 0.9.0 executes claim-scoped measurement audits: the analyst specifies
-which representation, units, context and claim are being evaluated, and the
-engine checks whether the declared evidence can support that claim.
+MeasureQual is an R framework for determining whether a computational measurement
+is qualified for a specific scientific claim under a defined design, context,
+and reference structure. Analysts declare assumptions and decision rules;
+the framework checks prerequisites and constrains interpretation.
 
-It checks declarations, callback dependencies, constructibility and inferential
-support, evaluates declared alternatives, and produces canonical evidence records.
-It does not rank signatures, infer biological truth, validate original clinical
-models, rescue a failed claim or transfer evidence between records.
+It is not a universal signature-ranking tool, biological-truth engine,
+leaderboard, automatic claim-validation system or causal-inference engine.
 
 ## Installation
 
 ```r
-remotes::install_github("ZichenSheng/evaluably")
-# Optional frozen signature/resource registries; independent of evaluably:
-remotes::install_github("ZichenSheng/evaluably", subdir = "companion/gbm201data", force = TRUE)
+remotes::install_github("ZichenSheng/MeasureQual")
+# Optional frozen signature/resource registries; independent of MeasureQual:
+remotes::install_github("ZichenSheng/MeasureQual", subdir = "companion/gbm201data", force = TRUE)
 ```
 
-With remotes 2.5.0, `force = TRUE` avoids a repository-name cache shortcut
-that can incorrectly skip the companion after installing the root package.
-Both installations were tested from GitHub in a clean library.
+The companion command uses `force = TRUE` to avoid remotes repository-name
+cache shortcuts when installing two packages from the same repository.
 
 ## Synthetic example
 
 ```r
-library(evaluably)
-source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+library(MeasureQual)
+source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 toy <- toy_spec()
 frozen <- freeze_audit(toy$spec)
 check <- check_audit(frozen, toy$data)
@@ -50,18 +48,24 @@ a record. Terminal states are unordered, not a score:
 
 ## Scope and provenance
 
-The software implements the frozen ACT6 contract supporting the glioblastoma
-transcriptomic-signature project. Software verification does not adjudicate
-manuscript scientific results. `gbm201data` contains gene memberships, publication
-identities, provenance and scoped evaluability declarations; it contains no raw
-expression, clinical, patient, sample, cell, spot or AOI observations.
+MeasureQual supports explicit declarations for informativeness, resolution,
+context deformation, detectability, reference/null construction and recovery
+or qualification behavior. It evaluates the analyst's specified contract;
+it does not supply automatic scientific validity or causal identification.
+The terminal states are unordered and scoped to each claim and context.
 
-R >= 4.1 is required. The local authority used R 4.4.1 on macOS arm64.
-See PROVENANCE.md for current verification status. CI checks both packages on
-Linux, macOS and Windows. Configuration alone is not a cross-platform validation.
+Glioblastoma transcriptomic signatures are a motivating application, not the
+software's scope. The optional `gbm201data` companion supplies frozen resource
+definitions for manuscript-associated audits. Raw study databases and real
+patient, sample, cell, spot or AOI observations are not included.
 
-## Citation and license
+R >= 4.1 is required. See RENAME_INTEGRITY_REPORT.md for verification and
+MIGRATION.md for migration details. Original software is MIT licensed; no
+third-party source dataset is relicensed or redistributed.
 
-Use CITATION.cff for software citation. The archived version DOI is [10.5281/zenodo.22846293](https://doi.org/10.5281/zenodo.22846293). The companion belongs to this software
-release and does not receive a separate repository or DOI. Original code is MIT;
-source datasets retain their providers' terms and are not redistributed.
+## Citation and history
+
+Use CITATION.cff for this software. Formerly released as evaluably v0.9.0,
+archived at https://doi.org/10.5281/zenodo.22846293. The software lineage uses
+https://doi.org/10.5281/zenodo.22846292. The new version DOI will be added after
+verified archival publication; the historical DOI is not the MeasureQual DOI.

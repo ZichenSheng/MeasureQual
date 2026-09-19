@@ -10,12 +10,12 @@ vignette: >
 REFERENCE_DEPENDENT is a declared limitation flag. It can coexist with a supported state and constrains the licence; it is not a terminal state.
 
 ```{r setup, include=FALSE}
-library(evaluably)
-source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+library(MeasureQual)
+source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 ```
 
 The complete synthetic declaration is installed at
-`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+`system.file("examples", "toy-workflow.R", package = "MeasureQual")`.
 Its scientific choices are illustrative declarations, never engine defaults.
 
 ```{r}

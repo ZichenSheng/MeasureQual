@@ -1,3 +1,3 @@
 library(testthat)
-library(evaluably)
-test_check("evaluably")
+library(MeasureQual)
+test_check("MeasureQual")

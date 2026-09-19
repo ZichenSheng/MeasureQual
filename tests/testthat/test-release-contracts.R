@@ -1,8 +1,8 @@
 test_that("literal frozen API and taxonomy are exact", {
  expected<-c("representation_spec","unit_spec","reference_spec","alternative_spec","inferential_rule","decision_map","audit_spec","freeze_audit","amend_audit","verify_audit","check_audit","run_audit","evidence_record","constructibility_census","check_alternative_integrity","stress_response","audit_saturation","apply_decision_map","render_audit","audit_collection","denominator_summary")
- expect_setequal(getNamespaceExports("evaluably"),expected)
+ expect_setequal(getNamespaceExports("MeasureQual"),expected)
  expect_length(.s3_classes,13);expect_length(.condition_classes,29);expect_length(unique(.condition_classes),29);expect_length(.terminal_states,6)
- expect_false(any(c("score","grade","rank","pass_rate")%in%getNamespaceExports("evaluably")))
+ expect_false(any(c("score","grade","rank","pass_rate")%in%getNamespaceExports("MeasureQual")))
 })
 test_that("unit declarations reject malformed DAGs and pseudoreplication", {
  t<-toy_spec();u<-t$spec$unit_spec

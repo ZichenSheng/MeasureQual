@@ -16,11 +16,11 @@
 #' @param id_map_depends_on Explicit nested callback dependency declaration: packages, constants and functions. Helpers use list(fn, depends_on); raw helper hashes are forbidden.
 #' @return Immutable unit_spec with its scientific hash.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' t$spec$unit_spec
@@ -87,11 +87,11 @@ unit_spec <- function(scientific, computational, resampling, blocking, nesting, 
 #' @param doi Explicit doi declaration; no scientific value is inferred by the engine.
 #' @return Immutable reference_spec with callback manifest and hash.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' t$spec$reference_spec
@@ -136,11 +136,11 @@ reference_spec <- function(type, exactness, fn, source, nuisance_preserved, vers
 #' @param constraints_depends_on Explicit nested callback dependency declaration: packages, constants and functions. Helpers use list(fn, depends_on); raw helper hashes are forbidden.
 #' @return Immutable alternative_spec with generator and capacity identities.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' t$spec$alternative_spec
@@ -187,7 +187,7 @@ alternative_spec <- function(name, fn, generator_accessible, protected_evaluatio
 #' @param version Author-supplied version string.
 #' @return Immutable decision_map carrying its rule hash.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
 #' decision_map()

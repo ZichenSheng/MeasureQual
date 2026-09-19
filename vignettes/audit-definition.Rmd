@@ -10,12 +10,12 @@ vignette: >
 This synthetic declaration uses a constant author predicate: the outcome is stipulated by the definition. It demonstrates rule dispatch, not empirical identification.
 
 ```{r setup, include=FALSE}
-library(evaluably)
-source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+library(MeasureQual)
+source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 ```
 
 The complete synthetic declaration is installed at
-`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+`system.file("examples", "toy-workflow.R", package = "MeasureQual")`.
 Its scientific choices are illustrative declarations, never engine defaults.
 
 ```{r}

@@ -77,11 +77,11 @@
 #' @param integrity Integrity receipt; cannot replace a conflicting executed receipt.
 #' @return constructibility_census with separate capacity and inferential_support blocks.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' constructibility_census(s, t$data)

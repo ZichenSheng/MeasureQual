@@ -1,12 +1,14 @@
-Package: evaluably
-Title: Explicit Claim-Scoped Measurement Audit Declarations
-Version: 0.9.0
+Package: MeasureQual
+Title: Claim-Scoped Qualification of Computational Measurements
+Version: 0.10.0
 Authors@R: person("Zichen", "Sheng", role = c("aut", "cre"), email = "225113177+ZichenSheng@users.noreply.github.com")
-Description: Executes explicitly declared, claim-scoped measurement audits with
-    ordered preflight gates, callback dependency verification, constructibility
-    censuses, unordered qualification states and constrained interpretation
-    licences. Produces canonical evidence records and labelled denominator counts.
-    Scientific declarations and thresholds are supplied by the analyst.
+Description: Tools for claim-scoped qualification of computational measurements,
+    signatures and related quantitative constructs under explicit context,
+    reference and detectability assumptions. Checks declared scientific units,
+    callback dependencies, constructibility and inferential support, evaluates
+    declared alternatives, and produces canonical evidence records with
+    constrained interpretation. Scientific assumptions, thresholds and
+    decision rules are supplied by the analyst.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.1.0)
@@ -15,5 +17,5 @@ Suggests: testthat (>= 3.0.0), knitr, rmarkdown, withr, callr, yaml, covr
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 RoxygenNote: 7.3.3
-URL: https://github.com/ZichenSheng/evaluably
-BugReports: https://github.com/ZichenSheng/evaluably/issues
+URL: https://github.com/ZichenSheng/MeasureQual
+BugReports: https://github.com/ZichenSheng/MeasureQual/issues

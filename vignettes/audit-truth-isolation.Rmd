@@ -10,12 +10,12 @@ vignette: >
 The leaky callback closes over the protected truth vector. Declaring dependence requires human review. The repaired callback receives only accessible inputs; the protected assignment never enters its construction. The supported outcome follows an explicit synthetic author rule, not an automatic biological conclusion.
 
 ```{r setup, include=FALSE}
-library(evaluably)
-source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+library(MeasureQual)
+source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 ```
 
 The complete synthetic declaration is installed at
-`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+`system.file("examples", "toy-workflow.R", package = "MeasureQual")`.
 Its scientific choices are illustrative declarations, never engine defaults.
 
 ```{r}

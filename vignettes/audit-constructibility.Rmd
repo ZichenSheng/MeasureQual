@@ -10,12 +10,12 @@ vignette: >
 A zero-capacity cell blocks execution. A separate design whose smallest attainable probability is 1/16 cannot reach an explicitly declared alpha of .05. Later gates remain unassessed after the first block.
 
 ```{r setup, include=FALSE}
-library(evaluably)
-source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+library(MeasureQual)
+source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 ```
 
 The complete synthetic declaration is installed at
-`system.file("examples", "toy-workflow.R", package = "evaluably")`.
+`system.file("examples", "toy-workflow.R", package = "MeasureQual")`.
 Its scientific choices are illustrative declarations, never engine defaults.
 
 ```{r}

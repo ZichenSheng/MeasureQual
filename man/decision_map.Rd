@@ -19,7 +19,7 @@ Rules are evaluated by unique integer priority. Zero default rules are shipped. 
 }
 \section{Errors}{
 
-Malformed contracts raise structured evaluably conditions. Verification and
+Malformed contracts raise structured MeasureQual conditions. Verification and
 phase mismatches fail closed; no decision rule rescues a blocked gate.
 }
 

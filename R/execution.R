@@ -21,11 +21,11 @@
 #' @param discrimination Whether to compute secondary conditional discrimination; default FALSE.
 #' @return audit_run with raw evidence and no verdict.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' stress_response(s, t$data, constructibility_census(s, t$data))
@@ -122,11 +122,11 @@ stress_response <- function(spec,data,census,integrity=NULL,seed_context=NULL,di
 #' @param run audit_run, or blocked audit_check for qualification.
 #' @return Plain saturation descriptor with regions and flags.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' audit_saturation(run_audit(check_audit(s, t$data), t$data))
@@ -163,11 +163,11 @@ audit_saturation <- function(run) {
 #' @param seed_context Optional reproducible seed namespace.
 #' @return audit_run containing evidence, no qualification.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' run_audit(check_audit(s, t$data), t$data)

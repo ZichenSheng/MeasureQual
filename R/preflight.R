@@ -82,11 +82,11 @@
 #' @param strict FALSE for the MVP in-process probe; strict subprocess mode is not enabled.
 #' @return Plain integrity receipt with outcome, probe count, flagged symbols and flags.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' check_alternative_integrity(s, t$data)
@@ -139,11 +139,11 @@ check_alternative_integrity <- function(spec,data,n_probes=32L,strict=FALSE) {
 #' @param on_undetermined Only error is supported.
 #' @return Transient audit_check; blocked checks can emit durable evidence records.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' check_audit(s, t$data)

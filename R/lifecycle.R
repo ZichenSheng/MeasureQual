@@ -31,7 +31,7 @@
 #' @param x Audit object or evidence JSON path where supported.
 #' @return Invisible scalar logical; FALSE reports a verification mismatch.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
 #' verify_audit(list())
@@ -59,11 +59,11 @@ verify_audit <- function(x) {
 #' @param decision_map Explicit decision map declaration; no scientific value is inferred by the engine.
 #' @return Frozen audit_spec.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' freeze_audit(t$spec)
@@ -97,11 +97,11 @@ freeze_audit <- function(spec, decision_map=NULL) {
 #' @param changes Named replacement declarations; derived/governance fields cannot be set.
 #' @return Amended audit_spec; earlier objects and receipts are preserved.
 #' @section Errors:
-#' Malformed contracts raise structured evaluably conditions. Verification and
+#' Malformed contracts raise structured MeasureQual conditions. Verification and
 #' phase mismatches fail closed; no decision rule rescues a blocked gate.
 #' @examples
-#' library(evaluably)
-#' source(system.file("examples", "toy-workflow.R", package = "evaluably"))
+#' library(MeasureQual)
+#' source(system.file("examples", "toy-workflow.R", package = "MeasureQual"))
 #' t <- toy_spec()
 #' s <- freeze_audit(t$spec)
 #' amend_audit(t$spec, "SCIENTIFIC", "New declared endpoint", "analyst",

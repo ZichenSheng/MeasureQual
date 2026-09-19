@@ -1,7 +1,7 @@
 # gbm201data
 
 Frozen derived resource tables: nine MVP tables and seven accessors. No raw
-patient data, new biological analysis, ranking or evaluably dependency.
+patient data, new biological analysis, ranking or MeasureQual dependency.
 
 Throughout, each published signature is represented by its gene membership evaluated under a single frozen scoring rule. This evaluates the *representation* a signature defines, not the original published model, its trained coefficients, thresholds, or clinical decision rule. Claims about original model performance are outside the scope of this work.
 
@@ -20,3 +20,7 @@ Use gbm_signature(), gbm_membership(), gbm_representation(), gbm_evaluability(),
 gbm_claims(), gbm_provenance() and gbm_vocab(). HASHES.tsv hashes installed data
 files other than itself. data-raw/SOURCE_MANIFEST.json records frozen sources;
 data-raw/build_resources.py retabulates those local derived sources.
+
+This optional frozen GBM resource companion supports MeasureQual examples and
+manuscript-associated audits. Version 0.9.1 changes package documentation and
+the independence test only; frozen resource contents are unchanged.

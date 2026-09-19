@@ -28,5 +28,5 @@ test_that("cascade preserves frozen partitions and NA is not imputed", {
  expect_true(all(is.na(.table("PRIMARY201_MANIFEST")$claim_family)))
  expect_true(all(is.na(.table("REPRESENTATION_REGISTRY")$representation_hash)))
  expect_error(gbm_vocab("../PRIMARY201_MANIFEST"))
- expect_false("evaluably"%in%unlist(utils::packageDescription("gbm201data")[c("Depends","Imports","Suggests")]))
+ expect_false("MeasureQual"%in%unlist(utils::packageDescription("gbm201data")[c("Depends","Imports","Suggests")]))
 })

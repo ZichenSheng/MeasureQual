@@ -44,7 +44,7 @@ test_that("ISS-01 every registered condition has an actual signalling call", {
   }
   for(i in seq_along(e)) if(!identical(e[[i]],quote(expr=))) walk(e[[i]])
  }
- ns<-asNamespace("evaluably")
+ ns<-asNamespace("MeasureQual")
  for(n in ls(ns,all.names=TRUE)) {
   f<-get(n,ns)
   if(is.function(f)&&!is.primitive(f)) walk(body(f))
@@ -78,5 +78,5 @@ test_that("ISS-03 character states retain all pre-factor-removal hashes", {
   expect_identical(hashes$record_scientific_hash,r$provenance$record_scientific_hash)
   expect_identical(hashes$record_file_hash,r$provenance$record_file_hash)
  }
- expect_false(any(grepl("rank|leaderboard|numeric",getNamespaceExports("evaluably"))))
+ expect_false(any(grepl("rank|leaderboard|numeric",getNamespaceExports("MeasureQual"))))
 })
