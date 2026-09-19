@@ -28,4 +28,4 @@ jobs:
         with:
           working-directory: ${{ matrix.package }}
           args: 'c("--no-manual", "--as-cran")'
-          error-on: 'note'
+          error-on: '"note"'
