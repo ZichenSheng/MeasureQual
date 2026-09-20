@@ -55,7 +55,8 @@ for the companion when using its local cache; force=TRUE remains required.
 ## H. CROSS-PLATFORM CI
 
 Six checks configured for both packages on Linux, macOS and Windows.
-Migration CI must pass before creating v0.10.0; status pending at preparation.
+All six checks passed on release commit c0933027f77b98fa43090513fc0d5df3446e56f0.
+https://github.com/ZichenSheng/MeasureQual/actions/runs/35449283570
 
 ## I. ZENODO LINEAGE
 
@@ -66,3 +67,13 @@ same GitHub repository ID 1377225741 and associated with historical version
 22846293, whose verified concept is 22846292. The existing release webhook
 remains active. The historical GitHub URL returns 301 to MeasureQual.
 No new DOI is claimed until assigned; no unrelated concept record authorized.
+
+Post-publication verification: MeasureQual version DOI 10.5281/zenodo.22846512
+has concept DOI 10.5281/zenodo.22846292. SAME_CONCEPT_LINEAGE=YES.
+The Zenodo ZIP checksum verifies, and all 105 archived files exactly match
+the immutable v0.10.0 release commit. No duplicate concept record was created.
+These DOI annotations are a post-release main-branch update; tags are unchanged.
+
+Independent R sessions confirmed matching scientific record hashes and terminal
+states for executed and blocked synthetic workflows across both package versions.
+Only expected record IDs, timestamps and package provenance differ.

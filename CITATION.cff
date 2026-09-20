@@ -3,6 +3,8 @@ message: "Please cite this version of MeasureQual when using the software."
 title: "MeasureQual: Claim-scoped qualification of computational measurements"
 type: software
 version: 0.10.0
+doi: 10.5281/zenodo.22846512
+date-released: 2026-09-19
 authors:
   - family-names: Sheng
     given-names: Zichen

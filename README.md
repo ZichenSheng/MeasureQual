@@ -65,7 +65,9 @@ third-party source dataset is relicensed or redistributed.
 
 ## Citation and history
 
-Use CITATION.cff for this software. Formerly released as evaluably v0.9.0,
-archived at https://doi.org/10.5281/zenodo.22846293. The software lineage uses
-https://doi.org/10.5281/zenodo.22846292. The new version DOI will be added after
-verified archival publication; the historical DOI is not the MeasureQual DOI.
+Cite MeasureQual 0.10.0 using [the version DOI](https://doi.org/10.5281/zenodo.22846512)
+or CITATION.cff. The [concept DOI](https://doi.org/10.5281/zenodo.22846292)
+identifies the continuing software lineage.
+
+Formerly released as evaluably v0.9.0, preserved at
+[its historical DOI](https://doi.org/10.5281/zenodo.22846293).
